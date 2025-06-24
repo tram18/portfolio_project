@@ -1,0 +1,157 @@
+.h1-about {
+  padding-bottom: 50px;
+}
+
+.highlight-title {
+  font-size: 64px;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: -10px;
+  right: -30px;
+  height: 15px;
+  background-color: #6adbff;
+  z-index: -1;
+  border-radius: 30px;
+  transform: rotate(-5deg);
+}
+
+.has-circle-blue::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% + 0.05em);
+  height: calc(100% + 0.35em);
+  top: 0;
+  right: 0.05em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.about {
+    text-align: justify;
+}
+
+/* Grid layout for boxes */
+#professional-journey {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: min-content;
+  font-size: 1.1rem;
+
+}
+
+/* Common box styles */
+.box {
+  background-color: white;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.56);
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.timeline-meta {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 20px;
+  list-style-type: disc;
+  margin: 0;
+}
+
+
+/* About Me section - full width */
+.about-box, .hobby-box {
+  grid-column: span 2;
+}
+
+/* Box headers */
+.box-header {
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Box content */
+.box-content {
+  padding: 15px;
+}
+
+/* Specific styling for different boxes */
+.past-experiences-box .box-content {
+  min-height: 200px;
+}
+
+/* Make layout responsive */
+@media (max-width: 768px) {
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #professional-journey {
+    grid-template-columns: 1fr;
+  }
+
+  .about-box,
+  .past-experiences-box,
+  .hobby-box,
+  .quote-box,
+  .contact-box {
+    grid-column: span 1;
+  }
+}
+
+/* HTML structure modifications */
+.intro-section,
+.experience-cards {
+  display: none; /* Hide original content structure */
+}
+
+/* Timeline modifications */
+.timeline-item {
+  border-left: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.timeline-item::before {
+  display: none;
+
+  .title-container h1 {
+    font-size: 36px;
+  }
+
+  .highlight-title {
+    font-size: 48px;
+  }
+
+  .highlight-title::after {
+    height: 30px;
+  }
+}

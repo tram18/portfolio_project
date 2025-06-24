@@ -1,0 +1,87 @@
+.contact-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 20px;
+  background-color: #f9f9fb;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.56);
+
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: #8a8a9a;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  /* background-color: #dfdbe5; */
+  /* background-color: #e4f2f5; */
+  background-color: #e8e4d9;
+  color: #444;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+  border-radius: 20px;
+}
+
+.submit-btn {
+  background-color: #e67709;
+  color: white;
+  font-weight: 500;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background-color: #3367d6;
+}
+
+/* Success Message Styling */
+.form-success {
+  display: none; /* Initially hidden */
+  text-align: center;
+  padding: 20px;
+}
+
+.form-success p {
+  font-size: 18px;
+  color: #1a1723;
+  margin-bottom: 24px;
+}
+
+/* Two-column layout for name fields */
+.name-row {
+  display: flex;
+  gap: 20px;
+}
+
+.name-row .form-group {
+  flex: 1;
+}
