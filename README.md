@@ -46,7 +46,7 @@ Here are a few of the small projects included or linked in my portfolio:
 
 ---
 
-## 🚀 How to View
+## How to View
 
 You can visit the live site here:  
 👉 **https://tram18.github.io/portfolio_project/src/index.html** 
