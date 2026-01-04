@@ -118,14 +118,14 @@ h1 {
   flex-grow: 1;
   width: 100%;
   max-width: 1200px;
-  padding: 100px 20px 40px; /* Increased top padding to account for fixed header */
+  padding: 100px 20px 40px;
   text-align: center;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 30px;
@@ -291,15 +291,12 @@ h1 {
 } */
 
 .social-icon {
-
   color: #6c757d;
 
-  
   width: 24px;
   height: 24px;
   vertical-align: middle;
-  background: rgba(255,255,255,0.7); /* Light background */
-
+  background: rgba(255, 255, 255, 0.7); /* Light background */
 }
 
 .social-icon:hover {
@@ -324,6 +321,19 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .logo img {
+    display: none;
+  }
+
+  .intro {
+    font-size: 44px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
   .footer {
     flex-direction: column;
     gap: 15px;
