@@ -16,16 +16,8 @@
   gap: 2rem;
 }
 
-.title-container {
-  margin-bottom: 30px;
-}
-
-.portfolio-title {
-padding-bottom: 50px;
-}
-
 /* App cards */
-.app-card-link{
+.app-card-link {
   text-decoration: none;
 }
 .app-card {
@@ -37,9 +29,10 @@ padding-bottom: 50px;
   align-items: flex-start;
   gap: 1rem;
   /* box-shadow: var(--shadow-card); */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.56);
-
 }
 
 .app-card:hover {
