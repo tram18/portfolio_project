@@ -69,6 +69,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // feedback-tag clicks
+  document.querySelectorAll(".feedback-tag").forEach(function (tag) {
+    tag.addEventListener("click", function (e) {
+      e.stopPropagation();
+      currentIndex = -1;
+      showImage({
+        src: this.dataset.src,
+        alt: this.dataset.caption || "",
+        caption: this.dataset.caption || ""
+      });
+    });
+  });
+
   function showImage(item) {
     lightboxImg.src = item.src;
     lightboxImg.alt = item.alt;

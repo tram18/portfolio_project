@@ -3,11 +3,11 @@
    ============================================================ */
 
 /* ---------- paper & type ---------- */
-body {
+/* body {
   background-color: #f4f1ea;
   background-image: radial-gradient(circle, #d8d4cc 1px, transparent 1px);
   background-size: 22px 22px;
-}
+} */
 
 /* override os-font rule from style.css */
 .about,
@@ -281,6 +281,15 @@ body {
   margin: 1px 3px;
   vertical-align: middle;
   box-shadow: 1.5px 1.5px 0px #222222;
+}
+
+.feedback-tag {
+  background: #F3A8BD !important;
+  cursor: pointer;
+}
+
+.feedback-tag:hover {
+  box-shadow: 3px 3px 0px #222222 !important;
 }
 
 /* cycle the 6 pastels automatically for any number of tags */
@@ -665,8 +674,12 @@ body {
   transition: opacity 0.2s ease;
 }
 
-.lightbox-prev { left: 20px; }
-.lightbox-next { right: 20px; }
+.lightbox-prev {
+  left: 20px;
+}
+.lightbox-next {
+  right: 20px;
+}
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
