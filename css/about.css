@@ -119,14 +119,16 @@ body {
 
 /* --- grid assignments --- */
 .box:nth-child(1) {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  grid-row: 1;
 }
-.box:nth-child(2),
+.box:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
 .box:nth-child(3) {
-  grid-column: span 1;
-}
-.box:nth-child(4) {
   grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 /* ---------- accent palette ---------- */
@@ -144,46 +146,104 @@ body {
   color: #94c8e8;
 }
 
-/* Box 2 — Recent   (Lavender) */
+/* Box 2 — Education (Warm Yellow) */
 .box:nth-child(2) .box-header {
-  background-color: #b2a2d8;
+  background-color: #bbe2a1;
 }
-.box:nth-child(2) .timeline-item {
+
+.box:nth-child(2) .timeline-item:nth-child(1) {
+  border-left-color: #94c8e8;
+}
+.box:nth-child(2) .timeline-item:nth-child(1)::before {
+  background-color: #94c8e8;
+}
+.box:nth-child(2) .timeline-item:nth-child(1) .timeline-description li::before {
+  color: #94c8e8;
+}
+
+.box:nth-child(2) .timeline-item:nth-child(2) {
   border-left-color: #b2a2d8;
 }
-.box:nth-child(2) .timeline-item::before {
+.box:nth-child(2) .timeline-item:nth-child(2)::before {
   background-color: #b2a2d8;
 }
-.box:nth-child(2) .timeline-description li::before {
+.box:nth-child(2) .timeline-item:nth-child(2) .timeline-description li::before {
   color: #b2a2d8;
 }
 
-/* Box 3 — Past     (Sage Green) */
-.box:nth-child(3) .box-header {
-  background-color: #bbe2a1;
-}
-.box:nth-child(3) .timeline-item {
+.box:nth-child(2) .timeline-item:nth-child(3) {
   border-left-color: #bbe2a1;
 }
-.box:nth-child(3) .timeline-item::before {
+.box:nth-child(2) .timeline-item:nth-child(3)::before {
   background-color: #bbe2a1;
 }
-.box:nth-child(3) .timeline-description li::before {
+.box:nth-child(2) .timeline-item:nth-child(3) .timeline-description li::before {
   color: #bbe2a1;
 }
 
-/* Box 4 — Education (Warm Yellow) */
-.box:nth-child(4) .box-header {
-  background-color: #fce688;
+.box:nth-child(2) .timeline-item:nth-child(4) {
+  border-left-color: #f8b182;
 }
-.box:nth-child(4) .timeline-item {
+.box:nth-child(2) .timeline-item:nth-child(4)::before {
+  background-color: #f8b182;
+}
+.box:nth-child(2) .timeline-item:nth-child(4) .timeline-description li::before {
+  color: #f8b182;
+}
+
+/* Box 3 — Work Experience (Lavender header) */
+.box:nth-child(3) .box-header {
+  background-color: #b2a2d8;
+}
+
+.box:nth-child(3) .timeline-item:nth-child(1) {
+  border-left-color: #94c8e8;
+}
+.box:nth-child(3) .timeline-item:nth-child(1)::before {
+  background-color: #94c8e8;
+}
+.box:nth-child(3) .timeline-item:nth-child(1) .timeline-description li::before {
+  color: #94c8e8;
+}
+
+.box:nth-child(3) .timeline-item:nth-child(2) {
+  border-left-color: #b2a2d8;
+}
+.box:nth-child(3) .timeline-item:nth-child(2)::before {
+  background-color: #b2a2d8;
+}
+.box:nth-child(3) .timeline-item:nth-child(2) .timeline-description li::before {
+  color: #b2a2d8;
+}
+
+.box:nth-child(3) .timeline-item:nth-child(3) {
+  border-left-color: #bbe2a1;
+}
+.box:nth-child(3) .timeline-item:nth-child(3)::before {
+  background-color: #bbe2a1;
+}
+.box:nth-child(3) .timeline-item:nth-child(3) .timeline-description li::before {
+  color: #bbe2a1;
+}
+
+.box:nth-child(3) .timeline-item:nth-child(4) {
   border-left-color: #fce688;
 }
-.box:nth-child(4) .timeline-item::before {
+.box:nth-child(3) .timeline-item:nth-child(4)::before {
   background-color: #fce688;
 }
-.box:nth-child(4) .timeline-description li::before {
+.box:nth-child(3) .timeline-item:nth-child(4) .timeline-description li::before {
   color: #fce688;
+}
+
+.box:nth-child(3) .timeline-item:nth-child(5) {
+  border-left-color: #f8b182;
+}
+.box:nth-child(3) .timeline-item:nth-child(5)::before {
+  background-color: #f8b182;
+}
+.box:nth-child(3) .timeline-item:nth-child(5) .timeline-description li::before {
+  color: #f8b182;
 }
 
 /* --- hobbies page accents --- */
@@ -279,40 +339,13 @@ body {
   box-shadow: 3px 3px 0px #222222;
 }
 
-/* cycle the 6 pastels across 11 tags */
-.skill-tag:nth-child(1) {
-  background: #94c8e8;
-}
-.skill-tag:nth-child(2) {
-  background: #b2a2d8;
-}
-.skill-tag:nth-child(3) {
-  background: #bbe2a1;
-}
-.skill-tag:nth-child(4) {
-  background: #fce688;
-}
-.skill-tag:nth-child(5) {
-  background: #f8b182;
-}
-.skill-tag:nth-child(6) {
-  background: #f3a8bd;
-}
-.skill-tag:nth-child(7) {
-  background: #94c8e8;
-}
-.skill-tag:nth-child(8) {
-  background: #b2a2d8;
-}
-.skill-tag:nth-child(9) {
-  background: #bbe2a1;
-}
-.skill-tag:nth-child(10) {
-  background: #fce688;
-}
-.skill-tag:nth-child(11) {
-  background: #f8b182;
-}
+/* cycle the 6 pastels automatically for any number of tags */
+.skill-tag:nth-child(6n+1) { background: #94C8E8; }
+.skill-tag:nth-child(6n+2) { background: #B2A2D8; }
+.skill-tag:nth-child(6n+3) { background: #BBE2A1; }
+.skill-tag:nth-child(6n+4) { background: #FCE688; }
+.skill-tag:nth-child(6n+5) { background: #F8B182; }
+.skill-tag:nth-child(6n+6) { background: #F3A8BD; }
 
 /* ---------- timeline items ---------- */
 .timeline-item {
@@ -371,11 +404,19 @@ body {
 }
 
 .timeline-description li::before {
-  content: "▸";
+  content: "✦";
   position: absolute;
   left: 0;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.7rem;
+}
+
+.timeline-sub {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* ---------- hobbies intro ---------- */
@@ -483,9 +524,9 @@ body {
 
   .box:nth-child(1),
   .box:nth-child(2),
-  .box:nth-child(3),
-  .box:nth-child(4) {
+  .box:nth-child(3) {
     grid-column: span 1;
+    grid-row: auto;
   }
 
   .highlight-title,
