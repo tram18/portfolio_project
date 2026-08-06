@@ -146,49 +146,20 @@ body {
   color: #94c8e8;
 }
 
-/* Box 2 — Education (Warm Yellow) */
+/* Box 2 — Education*/
 .box:nth-child(2) .box-header {
-  background-color: #bbe2a1;
+  background-color: #88fce1;
 }
 
-.box:nth-child(2) .timeline-item:nth-child(1) {
-  border-left-color: #94c8e8;
+/* per-entry: drive colors from --accent CSS variable */
+.box:nth-child(2) .timeline-item {
+  border-left-color: var(--accent, #fce688) !important;
 }
-.box:nth-child(2) .timeline-item:nth-child(1)::before {
-  background-color: #94c8e8;
+.box:nth-child(2) .timeline-item::before {
+  background-color: var(--accent, #fce688) !important;
 }
-.box:nth-child(2) .timeline-item:nth-child(1) .timeline-description li::before {
-  color: #94c8e8;
-}
-
-.box:nth-child(2) .timeline-item:nth-child(2) {
-  border-left-color: #b2a2d8;
-}
-.box:nth-child(2) .timeline-item:nth-child(2)::before {
-  background-color: #b2a2d8;
-}
-.box:nth-child(2) .timeline-item:nth-child(2) .timeline-description li::before {
-  color: #b2a2d8;
-}
-
-.box:nth-child(2) .timeline-item:nth-child(3) {
-  border-left-color: #bbe2a1;
-}
-.box:nth-child(2) .timeline-item:nth-child(3)::before {
-  background-color: #bbe2a1;
-}
-.box:nth-child(2) .timeline-item:nth-child(3) .timeline-description li::before {
-  color: #bbe2a1;
-}
-
-.box:nth-child(2) .timeline-item:nth-child(4) {
-  border-left-color: #f8b182;
-}
-.box:nth-child(2) .timeline-item:nth-child(4)::before {
-  background-color: #f8b182;
-}
-.box:nth-child(2) .timeline-item:nth-child(4) .timeline-description li::before {
-  color: #f8b182;
+.box:nth-child(2) .timeline-description li::before {
+  color: var(--accent, #fce688);
 }
 
 /* Box 3 — Work Experience (Lavender header) */
@@ -196,54 +167,14 @@ body {
   background-color: #b2a2d8;
 }
 
-.box:nth-child(3) .timeline-item:nth-child(1) {
-  border-left-color: #94c8e8;
+.box:nth-child(3) .timeline-item {
+  border-left-color: var(--accent, #b2a2d8) !important;
 }
-.box:nth-child(3) .timeline-item:nth-child(1)::before {
-  background-color: #94c8e8;
+.box:nth-child(3) .timeline-item::before {
+  background-color: var(--accent, #b2a2d8) !important;
 }
-.box:nth-child(3) .timeline-item:nth-child(1) .timeline-description li::before {
-  color: #94c8e8;
-}
-
-.box:nth-child(3) .timeline-item:nth-child(2) {
-  border-left-color: #b2a2d8;
-}
-.box:nth-child(3) .timeline-item:nth-child(2)::before {
-  background-color: #b2a2d8;
-}
-.box:nth-child(3) .timeline-item:nth-child(2) .timeline-description li::before {
-  color: #b2a2d8;
-}
-
-.box:nth-child(3) .timeline-item:nth-child(3) {
-  border-left-color: #bbe2a1;
-}
-.box:nth-child(3) .timeline-item:nth-child(3)::before {
-  background-color: #bbe2a1;
-}
-.box:nth-child(3) .timeline-item:nth-child(3) .timeline-description li::before {
-  color: #bbe2a1;
-}
-
-.box:nth-child(3) .timeline-item:nth-child(4) {
-  border-left-color: #fce688;
-}
-.box:nth-child(3) .timeline-item:nth-child(4)::before {
-  background-color: #fce688;
-}
-.box:nth-child(3) .timeline-item:nth-child(4) .timeline-description li::before {
-  color: #fce688;
-}
-
-.box:nth-child(3) .timeline-item:nth-child(5) {
-  border-left-color: #f8b182;
-}
-.box:nth-child(3) .timeline-item:nth-child(5)::before {
-  background-color: #f8b182;
-}
-.box:nth-child(3) .timeline-item:nth-child(5) .timeline-description li::before {
-  color: #f8b182;
+.box:nth-child(3) .timeline-description li::before {
+  color: var(--accent, #b2a2d8);
 }
 
 /* --- hobbies page accents --- */
@@ -340,12 +271,24 @@ body {
 }
 
 /* cycle the 6 pastels automatically for any number of tags */
-.skill-tag:nth-child(6n+1) { background: #94C8E8; }
-.skill-tag:nth-child(6n+2) { background: #B2A2D8; }
-.skill-tag:nth-child(6n+3) { background: #BBE2A1; }
-.skill-tag:nth-child(6n+4) { background: #FCE688; }
-.skill-tag:nth-child(6n+5) { background: #F8B182; }
-.skill-tag:nth-child(6n+6) { background: #F3A8BD; }
+.skill-tag:nth-child(6n + 1) {
+  background: #94c8e8;
+}
+.skill-tag:nth-child(6n + 2) {
+  background: #b2a2d8;
+}
+.skill-tag:nth-child(6n + 3) {
+  background: #bbe2a1;
+}
+.skill-tag:nth-child(6n + 4) {
+  background: #fce688;
+}
+.skill-tag:nth-child(6n + 5) {
+  background: #f8b182;
+}
+.skill-tag:nth-child(6n + 6) {
+  background: #f3a8bd;
+}
 
 /* ---------- timeline items ---------- */
 .timeline-item {
@@ -365,7 +308,7 @@ body {
   height: 13px;
   border-radius: 50%;
   border: 2.5px solid #222222;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 .timeline-item:last-child {
