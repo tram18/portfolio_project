@@ -31,10 +31,11 @@ document.querySelectorAll(".tag").forEach((tag, index) => {
 
 // Image Lightbox functionality
 document.addEventListener("DOMContentLoaded", function () {
-  // Create lightbox element
   const lightbox = document.createElement("div");
   lightbox.className = "lightbox";
   lightbox.innerHTML = `
+    <span class="lightbox-prev">&lsaquo;</span>
+    <span class="lightbox-next">&rsaquo;</span>
     <div class="lightbox-content">
       <span class="lightbox-close">&times;</span>
       <img src="" alt="">
@@ -46,47 +47,68 @@ document.addEventListener("DOMContentLoaded", function () {
   const lightboxImg = lightbox.querySelector("img");
   const lightboxCaption = lightbox.querySelector(".lightbox-caption");
   const closeBtn = lightbox.querySelector(".lightbox-close");
+  const prevBtn = lightbox.querySelector(".lightbox-prev");
+  const nextBtn = lightbox.querySelector(".lightbox-next");
 
-  // Add click event to all images in the gallery
   const imageWrappers = document.querySelectorAll(
-    ".about-images .image-wrapper"
+    ".about-images .image-wrapper, .hobbies-grid .hobby-cell"
   );
 
-  imageWrappers.forEach((wrapper) => {
-    wrapper.addEventListener("click", function () {
-      const img = this.querySelector(".profile-img");
-      const caption = this.querySelector(".image-caption");
+  let currentIndex = -1;
+  const items = [];
 
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightboxCaption.textContent = caption.textContent;
-      lightbox.classList.add("active");
-      document.body.style.overflow = "hidden"; // Prevent scrolling
+  imageWrappers.forEach(function (wrapper, index) {
+    const img = wrapper.querySelector(".gallery-img, img");
+    const caption = wrapper.querySelector(".image-caption, span");
+    if (!img) return;
+    items.push({ src: img.src, alt: img.alt, caption: caption ? caption.textContent : "" });
+
+    wrapper.addEventListener("click", function () {
+      currentIndex = index;
+      showImage(items[index]);
     });
   });
 
-  // Close lightbox on close button click
+  function showImage(item) {
+    lightboxImg.src = item.src;
+    lightboxImg.alt = item.alt;
+    lightboxCaption.textContent = item.caption;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function navigate(direction) {
+    currentIndex = (currentIndex + direction + items.length) % items.length;
+    showImage(items[currentIndex]);
+  }
+
+  prevBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    navigate(-1);
+  });
+  nextBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    navigate(1);
+  });
+
   closeBtn.addEventListener("click", function (e) {
     e.stopPropagation();
     closeLightbox();
   });
 
-  // Close lightbox on background click
   lightbox.addEventListener("click", function (e) {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
+    if (e.target === lightbox) closeLightbox();
   });
 
-  // Close lightbox on ESC key
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && lightbox.classList.contains("active")) {
-      closeLightbox();
-    }
+    if (!lightbox.classList.contains("active")) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") navigate(-1);
+    if (e.key === "ArrowRight") navigate(1);
   });
 
   function closeLightbox() {
     lightbox.classList.remove("active");
-    document.body.style.overflow = ""; // Re-enable scrolling
+    document.body.style.overflow = "";
   }
 });
