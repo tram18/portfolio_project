@@ -1,15 +1,17 @@
 # 🦄 Portfolio Website
 
-## About This Project
-
 Welcome to my personal portfolio website! This is a space where I showcase the projects, skills, and technologies I have been learning and practicing throughout my journey to become a Full Stack Web Developer.
 
 I also share a little about myself, my work experience, and the things I enjoy outside of coding.
+
+---
 
 ## How to View
 
 You can visit the live site here:  
 🐱 **https://tram18.github.io/portfolio_project/src/index.html**
+
+---
 
 ## Projects Featured
 
