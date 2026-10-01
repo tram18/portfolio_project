@@ -37,7 +37,7 @@ It’s designed to be **simple, responsive, and professional** — reflecting bo
 
 Here are a few of the small projects included or linked in my portfolio:
 
-- **Todo List App** – A simple Java or JavaScript CRUD app
+- **To do List App** – A simple Java or JavaScript CRUD app
 - **Weather App** – Displays real-time weather data using an API
 - **Mini Blog** – Practicing backend and database with Java Spring Boot
 - **UI Practice Pages** – HTML/CSS design experiments
